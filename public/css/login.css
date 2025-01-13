@@ -1,0 +1,108 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+html, body {
+    overflow-x: hidden; /* Memastikan tidak ada overflow horizontal */
+}
+
+.container-fluid {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+.row {
+    margin: 0;
+    padding: 0;
+    background-image: url('/images/backgroundlogin.png');
+    background-repeat: no-repeat; /* Ensures the image does not repeat */
+    background-position: center center; /* Center the image */
+    background-size: cover; /* Stretch the image to cover the entire row */
+    min-height: 100vh; /* Ensures the row is at least the height of the viewport */
+}
+
+/* ZOOM */
+img.petani.zoom {
+    width: 100%; /* Mengambil lebar penuh elemen induknya */
+    max-width: 640px; /* Batas maksimum ukuran gambar */
+    height: auto; /* Memastikan gambar mempertahankan rasio aspeknya */
+    display: block; /* Menghindari jarak tambahan pada gambar */
+    margin: 0 auto; /* Pusatkan gambar jika ada ruang */
+}
+
+@media (max-width: 768px) {
+    img.petani.zoom {
+        max-width: 50%; /* Gambar akan menempati maksimal 80% dari lebar layar */
+    }
+}
+
+@media (max-width: 480px) {
+    img.petani.zoom {
+        max-width: 30%; /* Pada layar kecil, gambar lebih kecil lagi */
+    }
+}
+
+
+.zoom {
+    transition: transform .2s;
+}
+.zoom:hover {
+    transform: scale(1.05);
+}
+
+/* Section Login */
+.form-login {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
+    border-radius: 15px; /* Rounded corners */
+}
+
+/* Logo */
+.logo {
+    height: 30px; 
+    width: auto;
+}
+
+/* Button */
+.btn-success {
+    background-color: #203B1F;
+    border-color: #203B1F;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.btn-success:hover {
+    background-color: #FDC858;
+    border-color: #FDC858;
+    color: #203B1F;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .form-login {
+        margin-left: 0; /* Remove left margin on smaller screens */
+        padding: 15px; /* Adjust padding */
+    }
+    .petani {
+        height: auto; /* Allow the image to scale down */
+        width: 100%; /* Make the image responsive */
+    }
+    .row {
+        flex-direction: column; /* Stack columns vertically */
+        align-items: center; /* Center items */
+        background: #ffffff; /* Change background to white on mobile */
+    }
+    .kiri {
+        padding-left: 0; /* Remove left padding */
+    }
+   
+}
+
+@media (max-width: 576px) {
+    .form-login {
+        padding: 10px; /* Adjust padding for extra small screens */
+    }
+    .btn-success {
+        padding: 15px; /* Adjust button padding */
+    }
+}

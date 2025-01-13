@@ -1,0 +1,478 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+.container-fluid {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+.row {
+    margin: 0;
+    padding: 0;
+}
+
+/* ZOOM */
+.zoom {
+    transition: transform .2s;
+
+}
+
+.zoom:hover {
+    transform: scale(1.1);
+}
+
+/* Navbar */
+.navbar {
+    background-color: transparent;
+}
+
+.navbar li {
+    font-weight: 600;
+}
+
+.navbar-nav .nav-link.active {
+    color: #F7C35F !important;
+    font-weight: bold;
+}
+
+.navbar {
+    transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(32, 59, 31, 0.8);
+}
+
+.navbar-collapse.collapse.show {
+    display: block !important;
+    background-color: rgba(32, 59, 31, 0.8);
+    color: white;
+}
+
+.navbar-collapse .nav-link {
+    color: #ffffff;
+    font-size: 18px;
+    padding: 10px 15px;
+    margin-left: 50px;
+}
+
+.navbar-toggler {
+    margin-right: 50px;
+}
+
+/* Sembunyikan profile di layar dengan lebar kurang dari 992px */
+@media (max-width: 991px) {
+    .navbar-nav.me-5 {
+      display: none !important;
+    }
+}
+
+/* Header */
+.header {
+    background: url('/images/img.png') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+}
+
+.header-content {
+    color: white;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    max-width: 720px;
+}
+
+@media screen and (max-width:480px)
+ {
+    .header-content {
+        color: white;
+        padding-right: 2rem;
+        padding-left: 2rem;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 720px;
+    }  
+}
+.header .pelajari {
+    background-color: #F7C35F;
+    color: #203B1F;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.header .pelajari:hover{
+    background-color: #203B1F;
+    border-color: #203B1F;
+    color: #F7C35F;
+}
+
+.relative-i {
+    position: relative;
+    display: inline-block;
+}
+
+.image-above-i {
+    position: absolute;
+    top: -27px;
+    left: -22px;
+    width: 50px;
+}
+
+/* bottom card */
+.bottom-card {
+    position: relative;
+    top: -80px;
+    background-color: #203B1F;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+.bottom-card .card {
+    background-color: #203B1F;
+    color: white;
+    border: none;
+}
+
+.bottom-card .card h5 {
+    color: #F7C35F;
+}
+
+.icon {
+    font-size: 60px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* artikel */
+.artikel {
+    padding: 20px;
+}
+
+.custom-card {
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.custom-card img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 100%;
+    height: 300px;
+}
+
+.custom-card h5 {
+    font-weight: 700;
+    color: #495E35;
+    margin-bottom: 15px;
+}
+
+.custom-card p {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.custom-card .btn {
+    background-color: #F7C35F;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.custom-card .btn:hover {
+    background-color: #203B1F;
+    color: #F7C35F;
+}
+
+.custom-card .btn i {
+    font-size: 20px;
+    line-height: 1;
+}
+
+.card-footer {
+    background-color: transparent;
+    border-top: none;
+    padding-right: 15px;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+}
+
+@media screen and (max-width: 480px) {
+    .swiper {
+      width: 100%; /* Pastikan lebar slider menyesuaikan layar */
+    }
+  
+    .swiper-slide {
+      font-size: 14px; /* Ukuran teks lebih kecil untuk layar kecil */
+    }
+  }
+  
+
+.swiper-slide {
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #203B1F;
+    /* Warna bullet aktif */
+}
+/* Menyelaraskan tinggi card */
+.custom-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 450px;
+}
+  
+.custom-card .card-body {
+    flex-grow: 1; 
+}
+  
+  
+.custom-card img {
+    max-height: 200px; /* Sesuaikan tinggi maksimal gambar */
+    object-fit: cover;
+}
+
+/* Section 2 */
+.section2 {
+    padding-top: 10rem;
+}
+
+.section2 h1 {
+    color: #F7C35F;
+}
+
+.section2 p {
+    color: white;
+}
+
+.contentdua {
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+.section2 a {
+    background-color: #F7C35F;
+    border-radius: 20px;
+    padding: 12px;
+}
+.section2 a:hover{
+    background-color: #2F4D3C;
+    border-color: #2F4D3C;
+    color: #F7C35F;
+}
+
+.col-md-4 img {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+
+/* Section 3 */
+
+.section3 {
+    margin-top: 15rem;
+    margin-bottom: 10rem;
+}
+
+.weather-card {
+    background: linear-gradient(to right, #F6C564, #78866B);
+    border-radius: 15px;
+    padding: 20px;
+    color: #2F4D3C;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 20px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.time-section {
+    margin: 20px 0 20px 20px;
+}
+
+.weather-card h1 {
+    font-size: 100px;
+}
+
+@media (max-width: 770px) {
+    .weather-card {
+      flex-direction: column; /* Stack sections vertically */
+      align-items: center;    /* Center content horizontally */
+    }
+  
+    .time-section,
+    .temperature-section {
+      width: 100%; /* Ensure both sections take full width */
+      text-align: center; /* Center text */
+    }
+  
+    /* Optional: Adjust font size or other styles for small screens */
+    #clock {
+      font-size: 2.4rem;
+    }
+
+    #temperature {
+        font-size: 2.4rem;
+      }
+  
+    #date, #weather-description, #feels-like {
+      font-size: 1.38rem;
+    }
+  }
+
+/* Section 4 */
+.section4 {
+    position: relative;
+    background-image: url('/images/CTA.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 0;
+}
+
+.section4 h2,
+.section4 h3 {
+    color: white;
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.section4 a {
+    background-color: #F7C35F;
+    padding: 15px 30px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    color: #000;
+    text-decoration: none;
+}
+
+.section4 a:hover{
+    background-color: #2F4D3C;
+    border-color: #2F4D3C;
+    color: #F7C35F;
+}
+
+@media (max-width: 768px) {
+    .section4 h2 {
+        font-size: 1.8rem;
+    }
+
+    .section4 a {
+        padding: 10px 20px;
+    }
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+}
+
+.cepat img {
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+    .cepat img {
+        width: 220px; /* Sesuaikan ukuran logo untuk layar kecil */
+    }
+}
+
+@media (max-width: 576px) {
+    .cepat img {
+        width: 200px; /* Sesuaikan ukuran logo untuk layar yang lebih kecil */
+    }
+}
+
+
+
+.cepat a {
+    color: #203B1F;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 30px;
+}
+
+.cepat p {
+    color: #203B1F;
+    font-weight: 500;
+}
+
+.social {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.social a {
+    color: #203B1F;
+    padding: 10px;
+}
+
+.footer .kanan {
+    background-color: #203B1F;
+    border-top-left-radius: 50px;
+}
+
+.footer .kiri {
+    background-color: #203B1F;
+    border-top-right-radius: 50px;
+}
+
+.footer .copyright {
+    background-color: #203B1F;
+    color: white;
+}
+
+.copyright p {
+    font-size: 14px;
+}

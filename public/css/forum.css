@@ -1,0 +1,558 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+html,
+body {
+    overflow-x: hidden;
+
+}
+
+.container-fluid {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+.row {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #203B1F;
+    margin: 0;
+}
+
+.navbar li {
+    font-weight: 600;
+}
+
+.navbar-nav .nav-link.active {
+    color: #F7C35F !important;
+    font-weight: bold;
+}
+
+.navbar {
+    transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(32, 59, 31, 0.8);
+}
+
+.navbar-collapse.collapse.show {
+    display: block !important;
+    background-color: rgba(32, 59, 31, 0.8);
+    color: white;
+}
+
+.navbar-collapse .nav-link {
+    color: #ffffff;
+    font-size: 18px;
+    padding: 10px 15px;
+    margin-left: 50px;
+}
+
+.navbar-toggler {
+    margin-right: 50px;
+}
+
+/* Sembunyikan profile di layar dengan lebar kurang dari 992px */
+@media (max-width: 991px) {
+    .navbar-nav.me-5 {
+        display: none !important;
+    }
+}
+
+
+/* Container */
+.container {
+    display: flex;
+    margin: 20px auto;
+    max-width: 1200px;
+    gap: 20px;
+}
+
+/* SECTION 1 */
+.section1 {
+    margin-top: 100px;
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #203B1F;
+    padding: 20px;
+    border-radius: 10px;
+    height: 75vh;
+    margin-top: 16px;
+    flex: 0 0 300px; /* Sidebar memiliki lebar tetap 300px */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.438);
+}
+
+
+.forum-button {
+    /* background-color: #EBEBEB; */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.forum-button.active {
+    background-color: #EBEBEB;
+    color: #0f2918;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.forum-button a {
+    text-decoration: none;
+    color: white;
+}
+
+.forum-button.active a {
+    color: #0f2918;
+    font-weight: bold;
+}
+
+.forum-button a:hover {
+    color: #F7C35F;
+}
+
+.forum-button span {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 4px 0;
+}
+
+.forum-list {
+    list-style: none;
+    margin: 10px 0;
+    padding: 0;
+}
+
+/* Sembunyikan menu secara default */
+.forum-list.hidden {
+    display: none;
+}
+
+.forum-list li {
+    color: white;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.forum-list li.active {
+    background-color: #EBEBEB;
+    color: #0f2918;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.forum-list li.active a {
+    color: #0f2918;
+    font-weight: bold;
+}
+
+.forum-list a {
+    text-decoration: none;
+    color: white;
+}
+
+.forum-list a:hover {
+    color: #F7C35F;
+}
+
+
+/* Main Content */
+.content {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 10px;
+    flex: 1;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.438);
+    height: 100vh;
+    height: auto;
+
+}
+
+.content h2 {
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #4B2204;
+}
+
+.content p {
+    /* font-weight: bold; */
+    text-align: center;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.discussion-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 5rem;
+}
+
+.discussion-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    font-weight: bold;
+    color: #4B2204;
+}
+
+.discussion-list a {
+    text-decoration: none;
+    color: #4B2204;
+}
+
+.discussion-list a:hover {
+    color: #F7C35F;
+}
+
+.discussion-list svg {
+    margin-right: 30px;
+}
+
+/* Rotasi ikon */
+.icon {
+    transition: transform 0.3s ease;
+}
+
+.icon.rotate {
+    transform: rotate(90deg);
+    /* Rotasi ke bawah */
+}
+
+.icon2 {
+    transition: transform 0.3s ease;
+}
+
+.icon2.rotate {
+    transform: rotate(-90deg);
+    /* Rotasi ke bawah */
+}
+
+/* CHAT */
+.chat-container {
+    flex: 1; /* Membuat elemen ini mengisi ruang yang tersisa */
+    background: white;
+    border-radius: 10px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.438);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 75vh;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 16px;
+    
+}
+
+  
+  /* Media Query untuk layar kecil (ponsel) */
+  @media (max-width: 768px) {
+    .chat-container {
+      height: 65vh; /* Sesuaikan tinggi untuk layar lebih kecil */
+      margin: 8px;  /* Kurangi margin untuk ponsel */
+      border-radius: 5px; /* Sesuaikan radius untuk tampilan kecil */
+      box-shadow: 1px 0 5px rgba(0, 0, 0, 0.3); /* Lebih ringan untuk ponsel */
+    }
+  }
+  
+  /* Media Query untuk layar sangat kecil (misalnya, di bawah 480px) */
+  @media (max-width: 480px) {
+    .chat-container {
+      height: 60vh;
+      margin: 4px;
+      border-radius: 4px;
+      box-shadow: 1px 0 3px rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+
+.chat-header {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.chat-header h2 {
+    margin-top: 6px;
+    font-size: 35px;
+    font-weight: bold;
+    color: #4B2204;
+}
+
+.chat-messages p {
+    font-size: 14px;
+    color: gray;
+    text-align: left;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.message {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 40px;
+}
+
+.message img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Batasi ukuran gambar di dalam Lightbox */
+.lb-image {
+    max-width: 90%; /* Maksimal 90% dari lebar layar */
+    max-height: 90%; /* Maksimal 90% dari tinggi layar */
+    object-fit: contain; /* Pastikan gambar tetap dalam proporsi */
+}
+
+/* Ubah ukuran container jika diperlukan */
+.lb-container {
+    max-width: 800px; /* Batas maksimal lebar gambar */
+    max-height: 600px; /* Batas maksimal tinggi gambar */
+    margin: auto; /* Posisikan di tengah */
+    transition: transform 0.3s ease-in-out; /* Animasi transisi */
+}
+
+/* Sesuaikan overlay agar lebih jelas */
+.lb-overlay {
+    background-color: rgba(0, 0, 0, 0.85); /* Warna latar belakang */
+}
+
+/* Sesuaikan tombol navigasi */
+.lb-next, .lb-prev {
+    font-size: 2rem; /* Ukuran tombol berikutnya/sebelumnya */
+    color: white; /* Warna tombol */
+}
+
+
+
+
+.message-content {
+    background: #FFECC8;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.192);
+    border-radius: 0 20px 20px 20px;
+    padding: 16px 16px;
+    max-width: 70%;
+    position: relative;
+    word-wrap: break-word; /* Membungkus kata yang terlalu panjang */
+    overflow-wrap: break-word; /* Memastikan kata panjang juga terpotong */
+    white-space: normal; /* Menjaga teks supaya bisa dibungkus */
+    display: inline-block; /* Agar bisa membungkus teks */
+}
+
+.message-content p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;    
+    font-weight: 450;
+}
+
+.message-content .time {
+    position: absolute;
+    bottom: -19px;
+    right: 5px;
+    font-size: 10px;
+    color: gray;
+}
+
+.message.sent {
+    justify-content: flex-end;
+}
+
+.message.sent .message-content {
+    background: #F6F6F6;
+    border-radius: 20px 20px 0 20px;
+}
+
+.message.sent img {
+    margin-left: 0px;
+    margin-right: 0;
+}
+
+.chat-input {
+    display: flex;
+    align-items: flex-end; /* Tombol berada di bawah */
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    position: relative;
+}
+
+.chat-input textarea {
+    flex-grow: 1; /* Input akan mengisi ruang yang tersedia */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+    font-size: 14px;
+    box-sizing: border-box; /* Agar padding dihitung dalam lebar */
+    margin-right: 48px; /* Jarak antara input dan tombol send */
+    margin-left: 48px; /* Jarak antara input dan tombol send */
+    text-align: left; /* Teks dimulai dari kiri */
+    line-height: 20px; /* Mengatur jarak vertikal teks agar berada di atas */
+    height: 40px; /* Menyesuaikan tinggi otomatis dengan konten */    resize: none; /* Menghilangkan tombol resize */
+    overflow: auto; /* Membolehkan scroll jika konten melebihi area */
+    white-space: pre-wrap; /* Menjaga teks yang melampaui batas lebar agar tetap wrap */
+    word-wrap: break-word; /* Memastikan kata panjang dipotong jika melebihi lebar */
+}
+
+/* Sembunyikan scrollbar untuk Webkit-based browsers (Chrome, Safari) */
+.chat-input textarea::-webkit-scrollbar {
+    display: none;
+}
+
+/* Untuk Firefox, sembunyikan scrollbar */
+.chat-input textarea {
+    scrollbar-width: none; /* Untuk Firefox */
+}
+
+
+.chat-input .add-button,
+.chat-input .send-button {
+    background-color: #ffcc00;
+    color: #4B2204;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    font-size: 26px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 10px; /* Posisi tombol di bawah input */
+}
+
+.chat-input .add-button {
+    left: 10px; /* Tombol add di kiri input */
+}
+
+.chat-input .send-button {
+    right: 10px; /* Tombol send di kanan input */
+}
+
+
+/* FOOTER */
+.footer {
+    text-align: center;
+}
+
+.cepat a {
+    color: #203B1F;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 30px;
+}
+
+
+.cepat img {
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+    .cepat img {
+        width: 220px; /* Sesuaikan ukuran logo untuk layar kecil */
+    }
+}
+
+@media (max-width: 576px) {
+    .cepat img {
+        width: 200px; /* Sesuaikan ukuran logo untuk layar yang lebih kecil */
+    }
+}
+
+.cepat p {
+    color: #203B1F;
+    font-weight: 500;
+}
+
+.social {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.social a {
+    color: #203B1F;
+    padding: 10px;
+}
+
+.footer .kanan {
+    background-color: #203B1F;
+    border-top-left-radius: 50px;
+}
+
+.footer .kiri {
+    background-color: #203B1F;
+    border-top-right-radius: 50px;
+}
+
+.footer .copyright {
+    background-color: #203B1F;
+    color: white;
+}
+
+.copyright p {
+    font-size: 14px;
+}
+
+.messages-wrapper {
+    position: relative;
+}
+
+.date-label {
+    position: -webkit-sticky;  /* Untuk Safari */
+    position: sticky;
+    top: 0; /* Agar label berada di atas */
+    background-color: #624f06; /* Warna background untuk label floating */
+    z-index: 1000; /* Agar tetap berada di atas pesan */
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+    border: none;
+    width: 200px;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Tambahkan sedikit bayangan */
+    border-radius: 8px;
+    left: 50%; /* Mengatur posisi horizontal dari tengah */
+    transform: translateX(-50%); /* Memastikan elemen berada tepat di tengah */
+}
+

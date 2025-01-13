@@ -1,0 +1,294 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.container-fluid {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+.row {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: transparent;
+}
+
+.navbar li {
+    font-weight: 600;
+}
+
+.navbar-nav .nav-link.active {
+    color: #F7C35F !important;
+    font-weight: bold;
+}
+
+.navbar {
+    transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(32, 59, 31, 0.8);
+}
+
+.navbar-collapse.collapse.show {
+    display: block !important;
+    background-color: rgba(32, 59, 31, 0.8);
+    color: white;
+}
+
+.navbar-collapse .nav-link {
+    color: #ffffff;
+    font-size: 18px;
+    padding: 10px 15px;
+    margin-left: 50px;
+}
+/* Sembunyikan profile di layar dengan lebar kurang dari 992px */
+@media (max-width: 991px) {
+    .navbar-nav.me-5 {
+      display: none !important;
+    }
+}
+
+.navbar-toggler {
+    margin-right: 50px;
+}
+
+/* ZOOM */
+.zoom {
+    transition: transform .2s;
+
+}
+
+.zoom:hover {
+    transform: scale(1.1);
+}
+
+/* Header */
+.header {
+    background: url('/images/artikel/headerartikel.png') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.header-content {
+    color: white;
+    padding: 20px;
+    max-width: 710px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.header p {
+    font-size: 24px;
+}
+
+/* Article Section */
+h2 {
+    color: #4B2204;
+    font-weight: bold;
+}
+
+.card {
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    border: 0px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 250px;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 14px;
+    color: #8E8E8E
+}
+
+/* SWIPER */
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    display: block;
+}
+
+.pembatas {
+    margin-bottom: 20px;
+}
+
+.swiper-pagination-bullet {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #666666;
+    opacity: 1;
+    background: #fff;
+}
+
+.swiper-pagination-bullet-active {
+    color: #fff;
+    background: #3F6050;
+}
+
+.col-md-4 a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* Section 4 */
+.section4 .container-fluid {
+    padding: 0;
+}
+
+.section4 {
+    position: relative;
+    background-image: url('/images/CTA.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 0;
+    margin-top: 10rem;
+}
+
+.section4 h2,
+.section4 h3 {
+    color: white;
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.section4 a {
+    background-color: #F7C35F;
+    padding: 15px 30px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    color: #000;
+    text-decoration: none;
+}
+.section4 a:hover{
+    background-color: #2F4D3C;
+    border-color: #2F4D3C;
+    color: #F7C35F;
+}
+
+@media (max-width: 768px) {
+    .section4 h2 {
+        font-size: 1.8rem;
+    }
+
+    .section4 a {
+        padding: 10px 20px;
+    }
+}
+
+/* FOOTER */
+
+.footer {
+    text-align: center;
+}
+
+.cepat a {
+    color: #203B1F;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 30px;
+}
+
+
+.cepat img {
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+    .cepat img {
+        width: 220px; /* Sesuaikan ukuran logo untuk layar kecil */
+    }
+}
+
+@media (max-width: 576px) {
+    .cepat img {
+        width: 200px; /* Sesuaikan ukuran logo untuk layar yang lebih kecil */
+    }
+}
+
+.cepat p {
+    color: #203B1F;
+    font-weight: 500;
+}
+
+.social {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.social a {
+    color: #203B1F;
+    padding: 10px;
+}
+
+.footer .kanan {
+    background-color: #203B1F;
+    border-top-left-radius: 50px;
+}
+
+.footer .kiri {
+    background-color: #203B1F;
+    border-top-right-radius: 50px;
+}
+
+.footer .copyright {
+    background-color: #203B1F;
+    color: white;
+}
+
+.copyright p {
+    font-size: 14px;
+}

@@ -1,0 +1,403 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+.container-fluid {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+.row {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: transparent;
+}
+
+.navbar li {
+    font-weight: 600;
+}
+
+.navbar-nav .nav-link.active {
+    color: #F7C35F !important;
+    font-weight: bold;
+}
+
+.navbar {
+    transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(32, 59, 31, 0.8);
+}
+
+.navbar-collapse.collapse.show {
+    display: block !important;
+    background-color: rgba(32, 59, 31, 0.8);
+    color: white;
+}
+
+.navbar-collapse .nav-link {
+    color: #ffffff;
+    font-size: 18px;
+    padding: 10px 15px;
+    margin-left: 50px;
+}
+
+.navbar-toggler {
+    margin-right: 50px;
+}
+
+/* Sembunyikan profile di layar dengan lebar kurang dari 992px */
+@media (max-width: 991px) {
+    .navbar-nav.me-5 {
+      display: none !important;
+    }
+}
+
+/* Header */
+.header {
+    background: url('/images/bannerpantau.png') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Section 1 */
+.awal {
+    background-color: #203B1F;
+    text-align: center;
+}
+
+.awal h1 {
+    font-weight: bold;
+    color: #F7C35F;
+}
+
+.awal p {
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    margin: 0 auto;
+    word-wrap: break-word;
+    max-width: 1000px;
+    margin-bottom: 20px;
+}
+
+.card-container {
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 30px;
+    width: 90%;
+    max-width: 1500px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.card.data {
+    width: 100%; /* Ukuran penuh awal */
+    transition: all 0.5s ease; /* Animasi smooth dengan durasi 0.5 detik */
+}
+
+/* Shrink effect for the main card */
+.card.shrink {
+    transform: translateX(20px); /* Move left sedikit lebih proporsional */
+    width: 90%; /* Shrink the width to 90% */
+}
+
+
+/* Ensure the result card container takes 90% width and stays aligned */
+#result-card-container {
+    width: 90%; /* Occupy 70% width of its container */
+    display: none; /* Hidden initially, shown after the button click */
+    justify-content: center;
+    margin: 0 auto;
+}
+
+#result-card-container .card {
+    padding: -30px;
+    width: 90%; 
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#result-card-container {
+    opacity: 0; /* Awalnya transparan */
+    transform: translateX(50px); /* Geser ke kanan */
+    transition: all 0.5s ease; /* Durasi transisi dan efek smoothing */
+}
+
+#result-card-container.show {
+    opacity: 1; /* Muncul sepenuhnya */
+    transform: translateX(0); /* Kembali ke posisi semula */
+}
+
+.hasil {
+    background-color: #ffffff;
+    border-radius: 20px;
+    overflow: hidden; 
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: #000000;
+    transition: transform 0.5s ease, width 0.5s ease;
+}
+
+
+.card-header {
+    border: transparent;
+    background-color: transparent;
+}
+
+.card-footer {
+    background-color: #F7C35F;
+    border-radius: 0 0 20px 20px; /* Pastikan sudut bawah memiliki radius */
+    padding: 10px;
+    margin: 0; /* Hindari margin yang mengganggu */
+    box-sizing: border-box; /* Pastikan padding tidak memengaruhi lebar */
+    border: none;
+}
+
+
+.card-footer h2{
+    font-weight: 500;
+}
+.card-footer h2,
+.card-footer p {
+    text-align: start;
+    margin: 0; /* Hilangkan margin elemen di dalam footer */
+    padding: 2px ; /* Opsional untuk estetika */
+}
+.result h5 {
+    color: #2F4D3C;
+}
+.hasil h3 {
+    color: #2F4D3C;
+    background-color: #F7C35F;
+    margin-bottom: 30px;
+    /* font-size: 24px; */
+    padding: 10px;
+    display: inline-block; /* Membuat background menyesuaikan panjang teks */
+    border-radius: 5px; /* Opsional: menambahkan sudut melengkung untuk estetika */
+}
+
+.card h2 {
+    font-size: 25px;
+    margin-top: 10px;
+    color: #1A5319;
+    text-align: center;
+    font-weight: bold;
+}
+
+.card p {
+    font-size: 14px;
+    margin-bottom: 30px;
+    color: #000000;
+    text-align: center;
+}
+
+
+
+.data {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: #000000;
+    transition: transform 0.5s ease, width 0.5s ease;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+}
+
+.form-group {
+    flex: 1 1 calc(50% - 15px);
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    text-align: left;
+    font-size: 14px;
+}
+
+input, select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    width: 100%;
+}
+
+button {
+    background-color: #F7C35F;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #000000;
+    margin: 10px auto; /* Tambahkan auto untuk margin horizontal */
+    display: block; /* Mengubah tombol menjadi block agar mudah diatur */
+    width: fit-content; /* Sesuaikan lebar tombol dengan kontennya */
+    text-align: center;
+}
+
+button:hover {
+    background-color: #C4BC60;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column; /* Tumpuk kartu di layar kecil */
+        gap: 15px; /* Kurangi jarak untuk layar kecil */
+    }
+}
+
+
+
+/* SECTION 3 CTA */
+.section4 {
+    position: relative;
+    background-image: url('/images/CTA.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 0;
+}
+
+.section4 h2,
+.section4 h3 {
+    color: white;
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.section4 a {
+    background-color: #F7C35F;
+    padding: 15px 30px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    color: #000;
+    text-decoration: none;
+}
+.section4 a:hover{
+    background-color: #2F4D3C;
+    border-color: #2F4D3C;
+    color: #F7C35F;
+}
+
+@media (max-width: 768px) {
+    .section3 h2 {
+        font-size: 1.8rem;
+    }
+
+    .section3 a {
+        padding: 10px 20px;
+    }
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+}
+
+.cepat a {
+    color: #203B1F;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 30px;
+}
+
+
+.cepat img {
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+    .cepat img {
+        width: 220px; /* Sesuaikan ukuran logo untuk layar kecil */
+    }
+}
+
+@media (max-width: 576px) {
+    .cepat img {
+        width: 200px; /* Sesuaikan ukuran logo untuk layar yang lebih kecil */
+    }
+}
+
+.cepat p {
+    color: #203B1F;
+    font-weight: 500;
+}
+
+.social {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.social a {
+    color: #203B1F;
+    padding: 10px;
+}
+
+.footer .kanan {
+    background-color: #203B1F;
+    border-top-left-radius: 50px;
+}
+
+.footer .kiri {
+    background-color: #203B1F;
+    border-top-right-radius: 50px;
+}
+
+.footer .copyright {
+    background-color: #203B1F;
+    color: white;
+}
+
+.copyright p {
+    font-size: 14px;
+}
