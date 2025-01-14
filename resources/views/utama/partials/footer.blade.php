@@ -10,6 +10,9 @@
                     <li class="list-inline-item"><a href="/kalkulasi">Kalkulasi Tani</a></li>
                     <li class="list-inline-item"><a href="/artikel">Artikel</a></li>
                     <li class="list-inline-item"><a href="/diskusi">Forum Diskusi</a></li>
+                    <li class="list-inline-item"><a href="/chatai">Chat Ai</a></li>
+                    <li class="list-inline-item"><a href="/profil">Profile</a></li>
+
                 </ul>
                 <p>
                     Capai Pertanian Cerdas Berkelanjutan melalui Teknologi Modern yang Mampu Mendorong Produktivitas.

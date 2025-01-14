@@ -45,12 +45,10 @@ Route::get('/beranda', function () {
     return view('utama.homepage', compact('apiKey'));
 });
 
-
-
-
-Route::get('/monitoring', function () {
-    return utama('monitoring');
+Route::get('/chatai', function () {
+    return utama('chatai');
 });
+
 
 Route::get('/artikel', function () {
     return utama('artikel.index');

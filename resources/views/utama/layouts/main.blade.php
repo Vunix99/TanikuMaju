@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, initial-scale=1.0">
 
 @if (!request()->is('/') && !request()->is('registrasi'))
@@ -17,7 +18,7 @@
 
 @yield('main')
 
-@if (!request()->is('diskusi*') && !request()->is('/') && !request()->is('registrasi') && !request()->is('diskusi/chat/*') && !request()->is('profil'))
+@if (!request()->is('diskusi*') && !request()->is('/') && !request()->is('registrasi') && !request()->is('diskusi/chat/*') && !request()->is('profil') && !request()->is('chatai'))
     @include('utama.partials.ctaDiskusi')
 @endif
 

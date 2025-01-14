@@ -61,11 +61,11 @@
         <label class="input-label" for="phone">Nomor Telepon</label>
         <input type="text" id="phone" class="input-field" value="08647760129" enabled>
 
-        <div class="tombol" style="display: flex; align-items: center; height: 48px;">
+        <div class="tombol" style="display: flex; align-items: center; margin-top:24px;">
             <button type="button" class="btn btn-outline-primary" id="ubahPasswordBtn" data-bs-toggle="modal" data-bs-target="#exampleModal"
                 style="background-color: transparent; color: #F7C35F; border-color: #F7C35F; font-weight: 600; height: 100%; width:100%;">Ubah Password</button>
 
-            <button type="button" class="btn btn-primary" id="simpanPerubahanBtn" style="background-color: #F7C35F; color: #203B1F; margin-left: 10px; border-color: transparent; font-weight: 600; height: 100%; width:100%;">Simpan Perubahan</button>
+            <button type="button" class="btn btn-primary" id="simpanPerubahanBtn" style="background-color: #F7C35F; color: #203B1F; border-color: transparent; font-weight: 600; height: 100%; width:100%;">Simpan Perubahan</button>
         </div>
 
 

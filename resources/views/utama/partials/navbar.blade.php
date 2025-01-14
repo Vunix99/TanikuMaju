@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container-fluid">
 
-        <a class="navbar-brand ms-5" href="homepage.html">
+        <a class="navbar-brand ms-5" href="/beranda">
             <img src="{{ asset('images/logo.svg') }}" style="width: 100px;" alt="TanikuMaju" class="ms-3">
         </a>
 
@@ -24,6 +24,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ Request::is('diskusi') || Request::is('diskusi/chat/*') ? 'active' : '' }}" href="/diskusi">Forum Diskusi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ Request::is('chatai') ? 'active' : '' }}" href="/chatai">Chat Ai</a>
                 </li>
             </ul>
 

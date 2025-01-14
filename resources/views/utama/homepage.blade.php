@@ -1,6 +1,5 @@
 @extends('utama.layouts.main')
 @section('head')
-<meta charset="UTF-8">
 <!-- Website Icon -->
 <link rel="Website Icon" type="png" href="{{ asset('images/logotani.png') }}">
 <!-- AOS CDN -->
@@ -85,8 +84,7 @@
             <img src="{{ asset('images/carbon_rain.svg') }}" alt="">
           </div>
           <h5>Cuaca</h5>
-          <p>Dapatkan prediksi cuaca real-time dan laporan prakiraan cuaca jangka panjang untuk mengoptimalkan jadwal
-            pertanian Anda.</p>
+          <p>Dapatkan info cuaca secara realtime untuk mengoptimalkan jadwal pertanian anda.</p>
         </div>
       </div>
       <div class="col-md-4">
@@ -122,16 +120,14 @@
       <div class="col-md-8 flex-column">
         <div class="contentdua">
           <div class="isi" data-aos="fade-right" data-aos-duration="1500">
-            <h1 class="fw-bold">Pantau Lahan Pertanian</h1>
+            <h1 class="fw-bold">Temukan Tanggal Panen Pertanian Anda</h1>
             <br>
             <p>
-              Dapatkan akses ke data lahan pertanian terkini yang dirancang untuk meningkatkan hasil panen Anda. Pantau
-              kelembaban tanah, prediksi cuaca, dan deteksi hama dalam satu platform. Jadikan setiap keputusan pertanian
-              lebih tepat dan efektif dengan teknologi canggih kami.
+            Ketahui Waktu Panen dengan Tepat! Prediksi tanggal panen tanaman Anda secara akurat untuk hasil yang maksimal.  Jadikan setiap keputusan pertanian lebih tepat, efektif dan terencana dengan teknologi canggih kami.
             </p>
           </div>
           <br>
-          <a href="monitoring.html" class="btn btn-warning fw-bold" data-aos="fade-in" data-aos-duration="2000" data-aos-delay="100">Selanjutnya</a>
+          <a href="/kalkulasi" class="btn btn-warning fw-bold" data-aos="fade-in" data-aos-duration="2000" data-aos-delay="100">Selanjutnya</a>
         </div>
       </div>
       <div class="col-md-4 d-none d-md-flex align-items-center flex-column" data-aos="fade-left"
@@ -168,7 +164,7 @@
 <!--JS OPEN WEATHER-->
 <script>
   // API Key dari OpenWeather    
- const apiKey = "{{ $apiKey }}";
+  const apiKey = "{{ $apiKey }}";
 
   function fetchWeather() {
     if (navigator.geolocation) {
@@ -191,18 +187,22 @@
               console.log('Data Cuaca:', data);
 
               // Menampilkan detail cuaca
+              // Menampilkan detail cuaca
               document.getElementById('clock').innerText = new Date().toLocaleTimeString('id-ID');
               document.querySelector('.date-location h5').innerText = formatDate(new Date());
               document.querySelector('.date-location h5:last-child').innerHTML = `<i class="fas fa-map-marker-alt"></i> ${data.name}`;
-              document.querySelector('.temperature-section h1').innerText = `${data.main.temp}°C`;
+
+              // Pastikan menggunakan innerHTML untuk simbol derajat
+              document.querySelector('.temperature-section h1').innerHTML = `${data.main.temp}&deg;C`;
 
               // Terjemahkan deskripsi cuaca dan pilih icon cuaca
               const weatherDescription = translateWeatherDescription(data.weather[0].description);
               const icon = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
 
               document.querySelector('.temperature-section h5').innerText = weatherDescription;
-              document.querySelector('.temperature-section h5:last-child').innerText = `Terasa seperti ${data.main.feels_like}°C`;
+              document.querySelector('.temperature-section h5:last-child').innerHTML = `Terasa seperti ${data.main.feels_like}&deg;C`;
               document.querySelector('.weather-icon img').src = icon;
+
             })
             .catch((error) => {
               console.error('Kesalahan saat mengambil data cuaca:', error);

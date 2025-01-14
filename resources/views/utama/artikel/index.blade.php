@@ -36,7 +36,7 @@
   <!-- Article Section -->
   <div class="container my-5">
     <div class="text-center mb-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-      <h2>Artikel TanikuMaju</h2>
+      <h2>Artikel KawanTani</h2>
       <!-- Search Bar -->
       <div class="input-group mb-3 justify-content-center" data-aos="fade-up" data-aos-duration="2000"
         data-aos-delay="200">
@@ -177,7 +177,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const query = searchInput.value.trim().toLowerCase(); // Ambil nilai input dan ubah menjadi huruf kecil
     const swiperSlides = document.querySelectorAll('.swiper-slide'); // Ambil elemen swiper-slide
 
-    console.log(`Mencari artikel dengan kata kunci: "${query}"`); // Tambahkan log pencarian
 
     swiperSlides.forEach(slide => {
       const articles = slide.querySelectorAll('.article-title');

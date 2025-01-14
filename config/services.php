@@ -37,6 +37,11 @@ return [
         'sitekey' => env('HCAPTCHA_SITE_KEY'), // Kunci situs dari hCaptcha
     ],
 
+    'gemini' => [
+        'url' => env('GEMINI_API_URL'),
+        'key' => env('GEMINI_API_KEY'),
+    ],
+
 
 
 ];

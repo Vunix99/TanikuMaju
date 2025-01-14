@@ -7,6 +7,7 @@ body {
     overflow-x: hidden;
 }
 
+
 .container-fluid {
     padding-right: 0 !important;
     padding-left: 0 !important;
@@ -119,6 +120,35 @@ body {
     }
 }
 
+.section1 {
+    position: relative;
+    overflow-y: hidden;
+    width: 75%;  /* Default width */
+    margin: 0 auto;
+    max-height: 100%;
+    box-sizing: border-box;  /* Ensure padding is included in width calculation */
+}
+
+/* Responsif untuk layar kecil (smartphone) */
+@media screen and (max-width: 700px) {
+    .section1 {
+        width: 90%;  /* Mengurangi sedikit lebih kecil dari 100% untuk tampilan yang lebih baik */
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/* Responsif untuk layar lebih kecil dari 500px */
+@media screen and (max-width: 500px) {
+    .section1 {
+        width: 100%;  /* Lebar penuh pada layar yang sangat kecil */
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+  
+
 .logo-section {
     background: linear-gradient(to right, #1B1F23, #0D172A, #1B1F23, #0D172A, #1B1F23, #0D172A, #1B1F23, #0D172A);
     padding: 20px 0;
@@ -147,36 +177,148 @@ body {
 
 }
 
+/* Section 4 */
+.section4 {
+    position: relative;
+    background-image: url('/images/CTA.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 0;
+}
+
+.section4 h2,
+.section4 h3 {
+    color: white;
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.section4 a {
+    background-color: #F7C35F;
+    padding: 15px 30px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    color: #000;
+    text-decoration: none;
+}
+
+.section4 a:hover{
+    background-color: #2F4D3C;
+    border-color: #2F4D3C;
+    color: #F7C35F;
+}
+
+@media (max-width: 768px) {
+    .section4 h2 {
+        font-size: 1.8rem;
+    }
+
+    .section4 a {
+        padding: 10px 20px;
+    }
+}
+
+
 /* CHAT AI */
 .konten {
     background-color: #0D1814;
 }
 
+.chat-container {
+    max-height: 70vh; /* Adjust as needed */
+    overflow-y: auto;
+    padding: 15px;
+    background-color: transparent;
+    color: white;
+    border-radius: 10px;
+    margin: 10px auto;
+    width: 90%;
+    box-sizing: border-box;
+}
+
+
 .chat-input-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -50px;
-    margin-bottom: 30px;
+    padding-bottom: 30px;
+    height: auto;
+    background-color: #0D1814;
 }
+
 
 .chat-input {
     border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 30px;
+    resize: none; /* Prevent resizing by user */
+    max-height: 240px; /* Max height of the input box */
     padding: 15px 20px;
     background-color: #0D1814;
     color: white;
-    width: 800px;
+    width: 75%; /* Make it responsive by filling the parent width */
     outline: none;
+    overflow-y: hidden; /* Disable scrolling initially */
+    box-sizing: border-box; /* Ensures padding doesn't affect the width calculation */
+    transition: height 0.3s ease-in-out; /* Smooth transition for height change */
 }
+
+/* Default height for medium and large screens */
+#inputAi {
+    height: 44px;
+}
+
+/* For small screens (max-width 768px) */
+/* For screens with max-width 600px */
+@media (max-width: 600px) {
+    #inputAi {
+        height: 44px;
+        width: 80%;
+    }
+}
+
+/* For screens with max-width 768px but greater than 600px */
+@media (min-width: 601px) and (max-width: 768px) {
+    #inputAi {
+        height: 50px;
+        width: 75%;
+    }
+}
+
+/* For large screens with min-width 769px */
+@media (min-width: 769px) {
+    #inputAi {
+        height: 54px;
+    }
+}
+
+
+  
+  @media (max-width: 600px) {
+    .chat-input {
+      padding: 10px 15px; /* Adjust padding for smaller screens */
+      font-size: 14px; /* Optional: Adjust font size for smaller screens */
+    }
+  }
+  
 
 .chat-input::placeholder {
     color: rgba(255, 255, 255, 0.7);
 }
 
 .send-button {
-    padding: 10px;
-    margin-left: -55px;
+    padding: 20px;
     background-color: transparent;
     display: flex;
     align-items: center;
@@ -204,8 +346,9 @@ body {
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 250px;
+    margin-bottom: 100px;
 }
+
 
 .icon-container {
     background: linear-gradient(145deg, #1D5240, #0F392C);
@@ -216,6 +359,14 @@ body {
     align-items: center;
     margin-right: 15px;
 }
+
+@media (max-width: 800px) {
+    .icon-container {
+        display: none;
+        border-radius: 0px 20px 2px 20px; /* Sudut membulat */
+    }
+}
+
 
 .icon-container .iconify {
     color: white;
@@ -228,11 +379,59 @@ body {
     padding: 20px;
     color: #333;
     flex-grow: 1;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1), 0px 0px 24px rgba(5, 255, 180, 0.336); /* Neon green shadow */
     max-width: 880px;
     width: 100%;
     margin-right: 55px;
 }
+
+.answer-box-opening {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    color: #333;
+    flex-grow: 1;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1), 0px 0px 24px rgba(5, 255, 180, 0.336); /* Neon green shadow */
+    max-width: 880px;
+    width: 100%;
+    margin-right: 55px;
+}
+
+.question-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+}
+
+.question-box {
+    background-color: rgb(192, 255, 225); /* Warna latar belakang */
+    border-radius: 20px 20px 0px 20px; /* Sudut membulat */
+    padding: 20px; /* Jarak di dalam elemen */
+    color: #333; /* Warna teks */
+    display: inline-block; /* Menyesuaikan lebar dengan isi konten */
+    box-sizing: border-box; /* Padding dihitung dalam ukuran elemen */
+    word-wrap: break-word; /* Bungkus kata panjang */
+    white-space: normal; /* Izinkan pembungkusan teks */
+    margin-right: 55px;
+}
+
+/* Multiple Strings */
+#multipleStrings {
+    display: inline-block; /* Menyesuaikan lebar dengan konten */
+    white-space: normal; /* Izinkan teks membungkus */
+    padding: 5px; /* Tambahkan padding jika perlu */
+    font-size: 16px; /* Atur ukuran font agar sesuai kebutuhan */
+    color: #333; /* Warna teks */
+    max-width: 880px; /* Batas lebar maksimal */
+    word-wrap: break-word; /* Bungkus kata panjang */
+}
+
+
+
+
 
 /* FOOTER */
 .footer {
@@ -245,6 +444,25 @@ body {
     font-weight: bold;
     padding: 30px;
 }
+
+.cepat img {
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+    .cepat img {
+        width: 220px; /* Sesuaikan ukuran logo untuk layar kecil */
+    }
+}
+
+@media (max-width: 576px) {
+    .cepat img {
+        width: 200px; /* Sesuaikan ukuran logo untuk layar yang lebih kecil */
+    }
+}
+
 
 
 .cepat img {

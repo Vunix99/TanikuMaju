@@ -337,6 +337,43 @@ body {
 }
 
 
+/* Aturan umum untuk tombol */
+/* Aturan umum untuk tombol */
+.tombol button {
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+  }
+
+#simpanPerubahanBtn{
+    margin-left: 10px;
+}
+  
+/* Responsif untuk layar kecil */
+@media (max-width: 576px) {
+    .tombol {
+      display: flex;
+      flex-direction: column; /* Susun tombol secara vertikal */
+      align-items: stretch; /* Pastikan tombol memenuhi lebar container */
+      gap: 24px; /* Berikan jarak antar tombol */
+    }
+  
+    #ubahPasswordBtn {
+      margin-top: 0; /* Hapus margin tambahan jika ada */
+    }
+  
+    #simpanPerubahanBtn {
+      margin-left: 0; /* Hapus margin kiri */
+    }
+  
+    #logoutBtn {
+      width: 100%; /* Buat tombol logout memenuhi lebar container */
+    }
+  }
+  
+  
+
 
 
 .message-content {

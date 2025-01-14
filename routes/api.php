@@ -13,6 +13,8 @@ use App\Http\Controllers\DiskusiController;
 use App\Http\Controllers\ChatController;
 use App\Http\Controllers\TokenCheckController;
 use App\Http\Controllers\KalkulasiController;
+use App\Http\Controllers\GeminiAiController;
+
 use App\Models\Diskusi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -59,6 +61,8 @@ Route::middleware('auth:sanctum')->group(function () {
 
     Route::post('/chat', [ChatController::class, 'store']); // Untuk menambahkan chat
     Route::post('/chat/{id_diskusi}', [ChatController::class, 'getByDiskusi']); // Untuk mengambil chat berdasarkan id_diskusi
+
+    Route::post('/gemini/generate', [GeminiAiController::class, 'generateContent']);
 
 
     Route::get('/riwayat/user', [KalkulasiController::class, 'riwayat'])->name('riwayat');
