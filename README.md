@@ -168,22 +168,51 @@ php artisan post:diskusi
 - **Description**: Automatically populates the discussions table with predefined content
 
 ### Usage with Migration
-These commands are designed to run automatically after migrations. To enable this, add the following to your `DatabaseSeeder.php`:
+These commands are designed to run automatically after migrations. [Previous sections remain the same...]
 
+### Usage with Migration
+The commands are integrated directly into their respective migration files to automatically seed data when the tables are created:
+
+#### In `create_artikel` Migration:
 ```php
-public function run()
-{
-    $this->call([
-        // Other seeders...
-        \Database\Seeders\ArtikelSeeder::class,
-        \Database\Seeders\DiskusiSeeder::class,
-    ]);
-}
+    public function up()
+    {   
+        Schema::create('artikel', function (Blueprint $table) {
+            $table->id(); // Kolom ID (primary key) otomatis
+            $table->string('judul'); // Kolom untuk judul (string)
+            $table->string('gambar'); // Kolom untuk menyimpan path gambar (string)
+            $table->date('tanggal'); // Kolom untuk tanggal
+            $table->text('isi'); // Kolom untuk isi artikel (teks panjang)
+            $table->timestamps(); // Kolom created_at dan updated_at
+        });
+
+        Artisan::call('post:artikel');
+    }
 ```
 
-To run the entire migration and seeding process:
+#### In `create_diskusi` Migration:
+```php
+    public function up()
+    {
+        Schema::create('diskusi', function (Blueprint $table) {
+            $table->id('id_diskusi');
+            $table->string('topik');
+            $table->timestamps();
+        });
+
+        Artisan::call('post:diskusi');
+    }
+```
+
+This approach ensures that:
+- Data seeding occurs immediately after each table is created
+- The commands are executed automatically during migration
+- No manual seeding steps are required
+- Data is populated in the correct order
+
+To run the migrations:
 ```bash
-php artisan migrate:fresh --seed
+php artisan migrate
 ```
 
 ### File Requirements
